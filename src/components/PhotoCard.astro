@@ -1,0 +1,23 @@
+---
+interface Props {
+  src: string;
+  alt: string;
+  aspectRatio?: string;
+}
+
+const { src, alt, aspectRatio = 'portrait' } = Astro.props;
+
+const aspectRatioClasses = {
+  portrait: 'aspect-[3/4]',
+  landscape: 'aspect-[4/3]',
+  square: 'aspect-square'
+};
+---
+
+<div class="w-full h-full">
+  <img
+    src={src}
+    alt={alt}
+    class={`w-full h-full object-cover rounded-lg shadow-md ${aspectRatioClasses[aspectRatio as keyof typeof aspectRatioClasses] || aspectRatioClasses.portrait}`}
+  />
+</div>

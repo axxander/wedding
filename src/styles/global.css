@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@theme {
+  /* Color Palette - Cream shades */
+  --color-cream-50: #fdfbf7;
+  --color-cream-100: #fdf8f3;
+  --color-cream-200: #faf1e6;
+  --color-cream-300: #f7ead9;
+
+  /* Color Palette - Blue shades (matching invite) */
+  --color-blue-400: #8eabd9;
+  --color-blue-500: #7396ce;
+  --color-blue-600: #5a7ab3;
+  --color-blue-700: #4a6a9e;
+
+  /* Color Palette - Green shades (accent from invite) */
+  --color-green-400: #3a9020;
+  --color-green-500: #287416;
+  --color-green-600: #216012;
+  --color-green-700: #1a4d0e;
+
+  /* Font Families - Tailwind v4 requires --font-* not --font-family-* */
+  --font-serif: "Cormorant Garamond", serif;
+  --font-sans: "Inter", sans-serif;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-cream-100);
+    color: var(--color-blue-500);
+    font-family: var(--font-serif);
+    font-size: var(--text-lg);
+    min-height: 100vh;
+  }
+}

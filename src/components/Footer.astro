@@ -1,0 +1,20 @@
+---
+import Link from "./Link.astro";
+import FooterNavLink from "./FooterNavLink.astro";
+---
+
+<footer class="mt-12 pb-8">
+  <hr class="border-blue-400" />
+  <div class="mt-12 md:flex justify-between items-center">
+    <div class="text-2xl">
+      <p class="text-gray-800">M&A</p>
+      <Link href="/rsvp">JUL 31 2026</Link>
+    </div>
+    <nav class="grid grid-cols-2 gap-4 mt-12">
+      <FooterNavLink href="/faq">FAQ</FooterNavLink>
+      <FooterNavLink href="/travel">Travel & Stay</FooterNavLink>
+      <FooterNavLink href="/rsvp">RSVP</FooterNavLink>
+      <p class="uppercase text-gray-800 tracking-wide">made by alex</p>
+    </nav>
+  </div>
+</footer>

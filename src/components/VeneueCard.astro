@@ -1,0 +1,29 @@
+---
+interface Props {
+  label: string;
+  venueName: string;
+  venueUrl: string;
+  addressLine1: string;
+  addressLine2: string;
+  time: string;
+}
+
+const { label, venueName, venueUrl, addressLine1, addressLine2, time } =
+  Astro.props;
+---
+
+<div class="space-y-8">
+  <p class="uppercase text-gray-800 md:text-xl">
+    {label}
+  </p>
+  <a
+    href={venueUrl}
+    class="block underline underline-offset-4 decoration-1 text-xl md:text-2xl"
+    >{venueName}</a
+  >
+  <p class="text-xl md:text-2xl">
+    {addressLine1}<br />
+    {addressLine2}<br />
+    {time}
+  </p>
+</div>

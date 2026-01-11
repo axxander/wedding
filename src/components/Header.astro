@@ -1,0 +1,53 @@
+---
+import NavLink from "./NavLink.astro";
+import CTA from "./CTA.astro";
+---
+
+<header class="flex items-center justify-between py-6">
+  <a href="/" class="uppercase text-3xl text-blue-500">Megan & Alex</a>
+  <nav class="hidden md:flex items-center gap-8">
+    <NavLink href="/faq">FAQ</NavLink>
+    <NavLink href="/travel">Travel & Stay</NavLink>
+    <CTA href="/rsvp">RSVP</CTA>
+  </nav>
+  <button
+    class="md:hidden text-blue-500 text-3xl"
+    aria-label="Menu"
+    id="menu-open">☰</button
+  >
+</header>
+
+<!-- overlay escapes tailwind's container class, so setting px to match -->
+<div id="mobile-menu" class="fixed inset-0 bg-cream-100 px-4 hidden md:hidden">
+  <div class="absolute top-6 left-4">
+    <a href="/" class="uppercase text-3xl text-blue-500">Megan & Alex</a>
+  </div>
+  <button
+    class="absolute top-6 right-4 text-3xl text-blue-500"
+    aria-label="Close menu"
+    id="menu-close"
+  >
+    ✕
+  </button>
+  <nav class="flex flex-col items-center justify-center h-full gap-8">
+    <NavLink href="/faq">FAQ</NavLink>
+    <NavLink href="/travel">Travel & Stay</NavLink>
+    <CTA href="/rsvp">RSVP</CTA>
+  </nav>
+</div>
+
+<script>
+  const menuOpen = document.getElementById("menu-open");
+  const menuClose = document.getElementById("menu-close");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  if (menuOpen && menuClose && mobileMenu) {
+    menuOpen.addEventListener("click", () => {
+      mobileMenu.classList.remove("hidden");
+    });
+
+    menuClose.addEventListener("click", () => {
+      mobileMenu.classList.add("hidden");
+    });
+  }
+</script>
