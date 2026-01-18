@@ -1,18 +1,23 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import FAQItem from "../components/FAQItem.astro";
+import PageTitle from "../components/PageTitle.astro";
 ---
 
 <BaseLayout title="FAQ">
-  <h1 class="text-4xl text-gray-800 text-center font-medium tracking-wide">
-    FAQ
-  </h1>
-  <div class="flex flex-col justify-center mt-4 gap-2">
-    <FAQItem question="Can I stay at the venue?">
-      Answer to the question
-    </FAQItem>
+  <PageTitle> FAQ </PageTitle>
+  <div
+    class="content-container flex flex-col justify-center mt-4 md:mt-8 gap-2"
+  >
     <FAQItem question="What is the dress code?">
       Answer to the question
     </FAQItem>
+    <FAQItem question="What is the colour scheme?">
+      Answer to the question
+    </FAQItem>
+    <FAQItem question="What are the timings for the day?">
+      Answer to the question
+    </FAQItem>
+    <FAQItem question="Pictures..."> Answer to the question </FAQItem>
   </div>
 </BaseLayout>

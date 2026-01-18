@@ -1,5 +1,143 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import PageTitle from "../components/PageTitle.astro";
 ---
 
-<BaseLayout title="Travel & Stay" />
+<BaseLayout title="Travel & Stay">
+  <PageTitle>Travel & Stay</PageTitle>
+  <div class="content-container mt-4 md:mt-8">
+    <section class="mt-8">
+      <h2 class="text-2xl md:text-3xl font-medium tracking-wide">
+        Getting there
+      </h2>
+      <h3 class="text-xl md:text-2xl font-medium mt-2">By car</h3>
+      <p class="text-gray-800 mt-2 md:text-xl">
+        The venue is best reached by car. Parking is available on site, free of
+        charge.
+      </p>
+      <h3 class="text-xl md:text-2xl font-medium mt-2">By train</h3>
+      <p class="text-gray-800 mt-2 md:text-xl">
+        The nearest station is Market Harborough. From there, it's approximately
+        15 minutes by taxi or 20 minutes by bus (X7).
+      </p>
+    </section>
+    <section>
+      <h2 class="text-2xl md:text-3xl font-medium tracking-wide mt-4">
+        Accommodation
+      </h2>
+      <p class="text-gray-800 mt-2 md:text-xl">
+        There is no accommodation on site. Below are some nearby options, a
+        short drive from the venue:
+      </p>
+      <ul class="mt-2 space-y-2 list-disc list-inside md:text-xl text-gray-800">
+        <li>
+          <a
+            class="hover:text-blue-400"
+            href="https://www.churchfarmlodge.com/"
+            target="_blank">Church Farm Lodge</a
+          > – Harrington (2 miles)
+        </li>
+        <li>
+          <a
+            class="hover:text-blue-400"
+            href="https://www.thegeorgegreatoxendon.co.uk/"
+            target="_blank">The George</a
+          > – East Farndon (2.5 miles)
+        </li>
+        <li>
+          <a
+            class="hover:text-blue-400"
+            href="https://www.theoldposthousenaseby.co.uk/"
+            target="_blank">The Old Post House B&B</a
+          > – Naseby (4.5 miles)
+        </li>
+        <li>
+          <a
+            class="hover:text-blue-400"
+            href="https://www.travelodge.co.uk/hotels/511/Market-Harborough"
+            target="_blank">Travelodge</a
+          > – Market Harborough (5 miles)
+        </li>
+        <li>
+          <a
+            class="hover:text-blue-400"
+            href="https://www.premierinn.com/gb/en/hotels/england/leicestershire/market-harborough/market-harborough"
+            target="_blank">Premier Inn</a
+          > – Market Harborough (7.5 miles)
+        </li>
+        <li>
+          <a
+            class="hover:text-blue-400"
+            href="https://www.ketteringparkhotel.co.uk/"
+            target="_blank">Kettering Park Hotel & Spa</a
+          > – Kettering (11.5 miles)
+        </li>
+      </ul>
+    </section>
+    <section class="mt-8">
+      <h2 class="text-2xl md:text-3xl font-medium tracking-wide">Taxis</h2>
+      <p class="text-gray-800 mt-2 md:text-xl">
+        We recommend pre-booking taxis, particularly for the evening, as
+        availability is limited. Local taxi firms:
+      </p>
+      <ul class="mt-2 space-y-2 list-disc list-inside md:text-xl text-gray-800">
+        <li>
+          Grab A Cab – <a class="hover:text-blue-400" href="tel:07492853828"
+            >07492 853828</a
+          >
+        </li>
+        <li>
+          A1 Cabs – <a class="hover:text-blue-400" href="tel:01858468777"
+            >01858 468777</a
+          >
+        </li>
+        <li>
+          Murphy's Taxis – <a class="hover:text-blue-400" href="tel:01858410210"
+            >01858 410210</a
+          >
+        </li>
+        <li>
+          TJ Taxi – <a class="hover:text-blue-400" href="tel:07460175602"
+            >07460 175602</a
+          >
+        </li>
+        <li>
+          Luigi Cabs – <a class="hover:text-blue-400" href="tel:07912892809"
+            >07912 892809</a
+          >
+        </li>
+        <li>
+          A 2 B Taxis – <a class="hover:text-blue-400" href="tel:01858466770"
+            >01858 466770</a
+          >
+        </li>
+        <li>
+          Tilly's Taxis – <a class="hover:text-blue-400" href="tel:07885785137"
+            >07885 785137</a
+          >
+        </li>
+        <li>
+          Harborough Cabs – <a
+            class="hover:text-blue-400"
+            href="tel:07783316707">07783 316707</a
+          >
+        </li>
+        <li>
+          Bowden Taxis – <a class="hover:text-blue-400" href="tel:07901671966"
+            >07901 671966</a
+          >
+        </li>
+        <li>
+          Georges Taxis – <a class="hover:text-blue-400" href="tel:01858410210"
+            >01858 410210</a
+          >
+        </li>
+        <li>
+          Diamond Taxis – <a class="hover:text-blue-400" href="tel:01858469090"
+            >01858 469090</a
+          >
+        </li>
+      </ul>
+    </section>
+  </div>
+</BaseLayout>

@@ -1,19 +1,15 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import Header from "../components/Header.astro";
 import Hero from "../components/Hero.astro";
 import PhotoCard from "../components/PhotoCard.astro";
 import CTA from "../components/CTA.astro";
-import NavLink from "../components/NavLink.astro";
 import VeneueCard from "../components/VeneueCard.astro";
 ---
 
 <BaseLayout title="Megan & Alex - Wedding">
-  <!-- Hero Section -->
   <Hero title="Megan & Alex are tying the knot" />
 
   <main class="content-container">
-    <!-- Event Details Section -->
     <section class="py-12 md:py-16">
       <div
         class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 overflow-hidden"
@@ -38,7 +34,10 @@ import VeneueCard from "../components/VeneueCard.astro";
               time="19:30"
             />
           </div>
-          <CTA href="/rsvp">I'LL BE THERE </CTA>
+          <CTA
+            href="https://tally.so/embed/vGeAev?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+            >I'LL BE THERE
+          </CTA>
         </div>
 
         <!-- Right Column: Photo -->
@@ -51,15 +50,5 @@ import VeneueCard from "../components/VeneueCard.astro";
         </div>
       </div>
     </section>
-
-    <!-- Footer Navigation
-    <section class="py-16 border-t border-blue-500/20">
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
-        <NavLink text="Our Story" href="/our-story" />
-        <NavLink text="Travel & Stay" href="/travel" />
-        <NavLink text="Registry" href="/registry" />
-        <NavLink text="RSVP" href="/rsvp" />
-      </div>
-    </section> -->
   </main>
 </BaseLayout>

@@ -1,5 +1,46 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import PageTitle from "../components/PageTitle.astro";
 ---
 
-<BaseLayout title="RSVP" />
+<BaseLayout title="RSVP">
+  <PageTitle>RSVP</PageTitle>
+  <div class="content-container mt-4 md:mt-8">
+    <iframe
+      data-tally-src="https://tally.so/embed/vGeAev?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+      loading="lazy"
+      width="100%"
+      height="525"
+      frameborder="0"
+      marginheight="0"
+      marginwidth="0"
+      title="RSVP"></iframe>
+  </div>
+</BaseLayout>
+
+<script>
+  const d = document;
+  const w = "https://tally.so/widgets/embed.js";
+
+  function loadTally() {
+    if (typeof Tally !== "undefined") {
+      Tally.loadEmbeds();
+    } else {
+      document
+        .querySelectorAll("iframe[data-tally-src]:not([src])")
+        .forEach((e) => {
+          e.src = e.dataset.tallySrc;
+        });
+    }
+  }
+
+  if (typeof Tally !== "undefined") {
+    loadTally();
+  } else if (!d.querySelector(`script[src="${w}"]`)) {
+    const s = d.createElement("script");
+    s.src = w;
+    s.onload = loadTally;
+    s.onerror = loadTally;
+    d.body.appendChild(s);
+  }
+</script>

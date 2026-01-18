@@ -4,11 +4,13 @@ import CTA from "./CTA.astro";
 ---
 
 <header class="flex items-center justify-between py-6">
-  <a href="/" class="uppercase text-2xl text-blue-500">Megan & Alex</a>
-  <nav class="hidden md:flex items-center gap-8">
+  <a href="/" class="uppercase text-2xl md:text-3xl text-blue-500"
+    >Megan & Alex</a
+  >
+  <nav class="hidden md:flex items-center gap-8 md:text-xl">
     <NavLink href="/faq">FAQ</NavLink>
     <NavLink href="/travel">Travel & Stay</NavLink>
-    <CTA href="/rsvp">RSVP</CTA>
+    <CTA href="/rsvp"> RSVP </CTA>
   </nav>
   <button
     class="md:hidden text-blue-500 text-2xl"
