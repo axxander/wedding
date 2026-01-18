@@ -3,7 +3,7 @@ import NavLink from "./NavLink.astro";
 import CTA from "./CTA.astro";
 ---
 
-<header class="flex items-center justify-between py-6">
+<header class="header-container flex items-center justify-between py-6">
   <a href="/" class="uppercase text-2xl md:text-3xl text-blue-500"
     >Megan & Alex</a
   >
@@ -19,23 +19,22 @@ import CTA from "./CTA.astro";
   >
 </header>
 
-<!-- overlay escapes tailwind's container class, so setting px to match -->
-<div id="mobile-menu" class="fixed inset-0 bg-cream-100 px-4 hidden md:hidden">
-  <div class="absolute top-6 left-4">
-    <a href="/" class="uppercase text-2xl text-blue-500">Megan & Alex</a>
+<div id="mobile-menu" class="fixed inset-0 bg-cream-100 hidden md:hidden">
+  <div class="header-container flex h-full flex-col">
+    <div class="flex items-center justify-between py-6">
+      <a href="/" class="uppercase text-2xl text-blue-500">Megan & Alex</a>
+      <button
+        class="text-2xl text-blue-500"
+        aria-label="Close menu"
+        id="menu-close">✕</button
+      >
+    </div>
+    <nav class="flex flex-col items-center justify-center flex-1 gap-8">
+      <NavLink href="/faq">FAQ</NavLink>
+      <NavLink href="/travel">Travel & Stay</NavLink>
+      <CTA href="/rsvp">RSVP</CTA>
+    </nav>
   </div>
-  <button
-    class="absolute top-6 right-4 text-2xl text-blue-500"
-    aria-label="Close menu"
-    id="menu-close"
-  >
-    ✕
-  </button>
-  <nav class="flex flex-col items-center justify-center h-full gap-8">
-    <NavLink href="/faq">FAQ</NavLink>
-    <NavLink href="/travel">Travel & Stay</NavLink>
-    <CTA href="/rsvp">RSVP</CTA>
-  </nav>
 </div>
 
 <script>
