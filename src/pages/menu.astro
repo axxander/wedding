@@ -1,0 +1,82 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageTitle from "../components/PageTitle.astro";
+---
+
+<BaseLayout title="menu">
+  <PageTitle> Menu </PageTitle>
+  <section class="content-container mt-4 md:mt-8">
+    <h2 class="text-2xl md:text-3xl text-center font-medium tracking-wide">
+      Wedding Breakfast
+    </h2>
+    <div class="mt-2 md:mt-4">
+      <h3
+        class="text-xl md:text-2xl text-center font-medium tracking-wide underline underline-offset-4"
+      >
+        Starter
+      </h3>
+      <div class="flex flex-col items-center gap-2 text-gray-800 text-center">
+        <p>
+          Home-smoked duck breast, mushroom ketchup, torched baby onions,
+          pickled mushrooms, onion seed cracker
+        </p>
+        <span class="text-sm text-gray-400">OR</span>
+        <p>Leek and potato soup, crispy leeks (Ve)</p>
+        <span class="text-sm text-gray-400">OR</span>
+        <p>
+          Compressed watermelon, carrot, pickled cucumber, balsamic tomatoes,
+          radish salad, nasturtium leaves (Ve)
+        </p>
+      </div>
+    </div>
+
+    <div class="mt-2 md:mt-4">
+      <h3
+        class="text-xl md:text-2xl text-center font-medium tracking-wide underline underline-offset-4"
+      >
+        Main
+      </h3>
+      <div class="flex flex-col items-center gap-2 text-gray-800 text-center">
+        <p>
+          Roasted breast of Suffolk chicken, caramelised gratin potatoes, carrot
+          purée, leek fondant
+        </p>
+        <span class="text-sm text-gray-400">OR</span>
+        <p>
+          Seared Scottish salmon, cream-split dill sauce, champ potato cake,
+          wilted cabbage
+        </p>
+        <span class="text-sm text-gray-400">OR</span>
+        <p>
+          Fried Polenta, marinated artichokes, wilted spinach, crispy cavolo
+          nero and tomato salsa (V)
+        </p>
+      </div>
+    </div>
+
+    <div class="mt-2 md:mt-4">
+      <h3
+        class="text-xl md:text-2xl text-center font-medium tracking-wide underline underline-offset-4"
+      >
+        Dessert
+      </h3>
+      <div class="flex flex-col items-center gap-2 text-gray-800 text-center">
+        <p>
+          Eton Mess, British strawberries, vanilla whipped cream, meringue,
+          berry compote
+        </p>
+        <span class="text-sm text-gray-400">OR</span>
+        <p>Treacle tart, Devonshire clotted cream</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-container mt-4 md:mt-8">
+    <h2 class="text-2xl md:text-3xl text-center font-medium tracking-wide">
+      Evening Food
+    </h2>
+    <div class="mt-2 md:mt-4 text-gray-800 text-center">
+      <p>Cheese & charcuterie</p>
+    </div>
+  </section>
+</BaseLayout>
