@@ -9,46 +9,43 @@ import VeneueCard from "../components/VeneueCard.astro";
 <BaseLayout title="Megan & Alex - Wedding">
   <Hero title="Megan & Alex are tying the knot" />
 
-  <main class="content-container">
-    <section class="py-12 md:py-16">
-      <div
-        class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 overflow-hidden"
-      >
-        <div class="flex flex-col gap-4 md:gap-8">
-          <div class="flex flex-col gap-4 sm:flex-row md:gap-8">
-            <VeneueCard
-              label="Ceremony"
-              venueName="Kelmarsh Hall"
-              venueUrl="https://kelmarsh.com/"
-              addressLine1="Kelmarsh"
-              addressLine2="Northamptonshire, NN6 9LY"
-              time="12:30"
-            />
+  <section class="content-container py-12 md:py-16">
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 overflow-hidden"
+    >
+      <div class="flex flex-col gap-4 md:gap-8">
+        <div class="flex flex-col gap-4 sm:flex-row md:gap-8">
+          <VeneueCard
+            label="Ceremony"
+            venueName="Kelmarsh Hall"
+            venueUrl="https://kelmarsh.com/"
+            addressLine1="Kelmarsh"
+            addressLine2="Northamptonshire, NN6 9LY"
+            time="12:30"
+          />
 
-            <VeneueCard
-              label="Evening"
-              venueName="Kelmarsh Hall"
-              venueUrl="https://kelmarsh.com/"
-              addressLine1="Kelmarsh"
-              addressLine2="Northamptonshire, NN6 9LY"
-              time="19:30"
-            />
-          </div>
-          <CTA
-            href="https://tally.so/embed/vGeAev?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
-            >I'LL BE THERE
-          </CTA>
-        </div>
-
-        <!-- Right Column: Photo -->
-        <div>
-          <PhotoCard
-            src="/couple-photo.jpg"
-            alt="Megan and Alex"
-            aspectRatio="portrait"
+          <VeneueCard
+            label="Evening"
+            venueName="Kelmarsh Hall"
+            venueUrl="https://kelmarsh.com/"
+            addressLine1="Kelmarsh"
+            addressLine2="Northamptonshire, NN6 9LY"
+            time="19:30"
           />
         </div>
+        <CTA
+          href="https://tally.so/embed/vGeAev?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+          >I'LL BE THERE
+        </CTA>
       </div>
-    </section>
-  </main>
+
+      <div>
+        <PhotoCard
+          src="/couple-photo.jpg"
+          alt="Megan and Alex"
+          aspectRatio="portrait"
+        />
+      </div>
+    </div>
+  </section>
 </BaseLayout>
