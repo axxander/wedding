@@ -42,17 +42,19 @@ import CTA from "./CTA.astro";
 </div>
 
 <script>
-  const menuOpen = document.getElementById("menu-open");
-  const menuClose = document.getElementById("menu-close");
-  const mobileMenu = document.getElementById("mobile-menu");
+  document.addEventListener("astro:page-load", () => {
+    const menuOpen = document.getElementById("menu-open");
+    const menuClose = document.getElementById("menu-close");
+    const mobileMenu = document.getElementById("mobile-menu");
 
-  if (menuOpen && menuClose && mobileMenu) {
-    menuOpen.addEventListener("click", () => {
-      mobileMenu.classList.remove("hidden");
-    });
+    if (menuOpen && menuClose && mobileMenu) {
+      menuOpen.addEventListener("click", () => {
+        mobileMenu.classList.remove("hidden");
+      });
 
-    menuClose.addEventListener("click", () => {
-      mobileMenu.classList.add("hidden");
-    });
-  }
+      menuClose.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+      });
+    }
+  });
 </script>
