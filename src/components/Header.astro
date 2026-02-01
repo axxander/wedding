@@ -20,7 +20,7 @@ import CTA from "./CTA.astro";
   >
 </header>
 
-<div id="mobile-menu" class="fixed inset-0 bg-cream-100 hidden md:hidden">
+<div id="mobile-menu" class="fixed inset-0 bg-cream-100 hidden md:hidden z-50">
   <div class="header-container flex h-full flex-col">
     <div class="flex items-center justify-between py-6">
       <a href="/" class="uppercase text-2xl text-blue-500">Megan & Alex</a>
@@ -30,7 +30,9 @@ import CTA from "./CTA.astro";
         id="menu-close">✕</button
       >
     </div>
-    <nav class="flex flex-col items-center justify-center flex-1 gap-8">
+    <nav
+      class="flex flex-col items-center justify-center flex-1 gap-8 text-2xl"
+    >
       <NavLink href="/menu">Menu</NavLink>
       <NavLink href="/faq">FAQ</NavLink>
       <NavLink href="/travel">Travel & Stay</NavLink>
