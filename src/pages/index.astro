@@ -4,12 +4,22 @@ import Hero from "../components/Hero.astro";
 import PhotoCard from "../components/PhotoCard.astro";
 import CTA from "../components/CTA.astro";
 import VeneueCard from "../components/VeneueCard.astro";
+
+const images = [
+  "/alex-and-meg-image1.jpg",
+  "/alex-and-meg-image2.jpg",
+  "/alex-and-meg-image3.jpg",
+  "/alex-and-meg-image4.jpg",
+];
+
+const interval = 0.5;
+const duration = images.length * interval;
 ---
 
 <BaseLayout title="Megan & Alex - Wedding">
   <Hero title="Megan & Alex are tying the knot" />
 
-  <section class="content-container py-12 md:py-16">
+  <section class="py-12 md:py-16">
     <div
       class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 overflow-hidden"
     >
@@ -39,13 +49,39 @@ import VeneueCard from "../components/VeneueCard.astro";
         </CTA>
       </div>
 
-      <div>
-        <PhotoCard
-          src="/couple-photo.jpg"
-          alt="Megan and Alex"
-          aspectRatio="portrait"
-        />
+      <div class="relative w-full aspect-3/4 overflow-hidden">
+        {
+          images.map((src, i) => (
+            <img
+              src={src}
+              class="absolute inset-0 w-full h-full object-cover opacity-0 first:opacity-100 animate-flick"
+              style={`animation-delay: ${i * interval}s; animation-duration: ${duration}s;`}
+            />
+          ))
+        }
       </div>
     </div>
   </section>
 </BaseLayout>
+
+<style>
+  @keyframes flick {
+    0% {
+      opacity: 1;
+    }
+    25% {
+      opacity: 1;
+    } /* visible for exactly 1/N of the cycle */
+    25.01% {
+      opacity: 0;
+    } /* instant off, no fade */
+    100% {
+      opacity: 0;
+    }
+  }
+  .animate-flick {
+    animation-name: flick;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+</style>
